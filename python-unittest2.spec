@@ -1,3 +1,5 @@
+# NOTE: unittest2 1.1.0 is backport of unittest from cpython between 3.4.0/3.5.0
+#       unittest from cpython>=3.5.0 seems more robust
 #
 # Conditional build:
 %bcond_without	python2	# CPython 2.x module
@@ -11,10 +13,10 @@ Version:	1.1.0
 Release:	1
 License:	MIT
 Group:		Development/Tools
-#Source0Download: https://pypi.python.org/simple/unittest2/
-Source0:	https://pypi.python.org/packages/source/u/unittest2/unittest2-%{version}.tar.gz
+#Source0Download: https://pypi.org/simple/unittest2/
+Source0:	https://files.pythonhosted.org/packages/source/u/unittest2/unittest2-%{version}.tar.gz
 # Source0-md5:	f72dae5d44f091df36b6b513305ea000
-URL:		https://pypi.python.org/pypi/unittest2
+URL:		https://pypi.org/project/unittest2/
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.6
 BuildRequires:	python-setuptools
@@ -35,8 +37,6 @@ BuildRequires:	python3-traceback2
 %endif
 %endif
 BuildRequires:	rpmbuild(macros) >= 1.714
-Requires:	python-six >= 1.4
-Requires:	python-traceback2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,8 +52,6 @@ unittest w Pythonie 2.7 i nowszych.
 Summary:	New features in unittest backported to older Python versions
 Summary(pl.UTF-8):	Backport nowych funkcji modułu unittest do starszych wersji Pythona
 Group:		Development/Tools
-Requires:	python3-six >= 1.4
-Requires:	python3-traceback2
 
 %description -n python3-unittest2
 unittest2 is a backport of the new features added to the unittest

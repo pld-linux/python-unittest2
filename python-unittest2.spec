@@ -10,7 +10,7 @@ Summary:	New features in unittest backported to older Python versions
 Summary(pl.UTF-8):	Backport nowych funkcji modułu unittest do starszych wersji Pythona
 Name:		python-unittest2
 Version:	1.1.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		Development/Tools
 #Source0Download: https://pypi.org/simple/unittest2/
@@ -20,20 +20,20 @@ URL:		https://pypi.org/project/unittest2/
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.6
 BuildRequires:	python-setuptools
+BuildRequires:	python-traceback2
 %if %{with tests}
 %if "%{py_ver}" < "2.7"
 BuildRequires:	python-argparse
 %endif
 BuildRequires:	python-six >= 1.4
-BuildRequires:	python-traceback2
 %endif
 %endif
 %if %{with python3}
 BuildRequires:	python3-devel >= 1:3.2
 BuildRequires:	python3-setuptools
+BuildRequires:	python3-traceback2
 %if %{with tests}
 BuildRequires:	python3-six >= 1.4
-BuildRequires:	python3-traceback2
 %endif
 %endif
 BuildRequires:	rpmbuild(macros) >= 1.714

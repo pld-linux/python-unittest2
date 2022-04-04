@@ -10,7 +10,7 @@ Summary:	New features in unittest backported to older Python versions
 Summary(pl.UTF-8):	Backport nowych funkcji modułu unittest do starszych wersji Pythona
 Name:		python-unittest2
 Version:	1.1.0
-Release:	4
+Release:	5
 License:	MIT
 Group:		Development/Tools
 #Source0Download: https://pypi.org/simple/unittest2/

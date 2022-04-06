@@ -3,14 +3,14 @@
 #
 # Conditional build:
 %bcond_without	python2	# CPython 2.x module
-%bcond_without	python3	# CPython 3.x module
-%bcond_without	tests	# test target
+%bcond_with	python3	# CPython 3.x module
+%bcond_with	tests	# test target
 
 Summary:	New features in unittest backported to older Python versions
 Summary(pl.UTF-8):	Backport nowych funkcji modułu unittest do starszych wersji Pythona
 Name:		python-unittest2
 Version:	1.1.0
-Release:	5
+Release:	6
 License:	MIT
 Group:		Development/Tools
 #Source0Download: https://pypi.org/simple/unittest2/
